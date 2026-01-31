@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawsParadise - Welcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .welcome-screen {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #4ecdc4 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            animation: gradientShift 15s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .logo-big {
+            font-size: 6rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .welcome-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #ff6b6b;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .feature-item {
+            padding: 1rem;
+            background: #fff5e6;
+            border-radius: 10px;
+            border-left: 4px solid #ff6b6b;
+        }
+
+        .feature-item strong {
+            color: #ff6b6b;
+        }
+
+        .btn-enter {
+            display: inline-block;
+            padding: 1.5rem 3rem;
+            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+            margin-top: 1rem;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-enter:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
+        }
+
+        .pets-icons {
+            font-size: 2rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .pet-icon {
+            animation: wiggle 3s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        .pet-icon:nth-child(1) { animation-delay: 0s; }
+        .pet-icon:nth-child(2) { animation-delay: 0.2s; }
+        .pet-icon:nth-child(3) { animation-delay: 0.4s; }
+        .pet-icon:nth-child(4) { animation-delay: 0.6s; }
+        .pet-icon:nth-child(5) { animation-delay: 0.8s; }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
+        }
+
+        @media (max-width: 768px) {
+            .logo-big {
+                font-size: 4rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-enter {
+                font-size: 1.1rem;
+                padding: 1.2rem 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-screen">
+        <div class="welcome-content">
+            <div class="logo-big">🐾</div>
+            <h1>Welcome to PawsParadise</h1>
+            <p class="tagline">Your Pet's Happy Place Since 2015</p>
+            
+            <div class="pets-icons">
+                <span class="pet-icon">🐶</span>
+                <span class="pet-icon">🐱</span>
+                <span class="pet-icon">🐦</span>
+                <span class="pet-icon">🐠</span>
+                <span class="pet-icon">🐰</span>
+            </div>
+
+            <div class="features">
+                <div class="feature-item">
+                    <strong>🏆 Premium Products</strong><br>
+                    <small>High-quality pet supplies</small>
+                </div>
+                <div class="feature-item">
+                    <strong>💚 Expert Care</strong><br>
+                    <small>Certified veterinarians</small>
+                </div>
+                <div class="feature-item">
+                    <strong>🚚 Free Shipping</strong><br>
+                    <small>Orders over $50</small>
+                </div>
+                <div class="feature-item">
+                    <strong>🎁 Loyalty Rewards</strong><br>
+                    <small>Earn points on purchases</small>
+                </div>
+            </div>
+
+            <a href="home.html" class="btn-enter">Enter Store</a>
+
+            <p style="margin-top: 2rem; color: #999; font-size: 0.9rem;">
+                Where Every Pet is Treated Like Royalty 👑
+            </p>
+        </div>
+    </div>
+</body>
+</html>
